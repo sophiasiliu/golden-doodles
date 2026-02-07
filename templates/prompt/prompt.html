@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form method="POST">
+        <input type="text" name="passout_prompt" placeholder="Type prompt..." required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if prev_attempt %}
+        <p><strong>Input received: </strong>{{ prev_attempt }}</p>
+    {% endif %}
+
+</body>
+</html>

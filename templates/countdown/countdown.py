@@ -6,7 +6,6 @@ schedule : dict = {
     "Midnight Snack":datetime(2026,2,7)
 }
 
-
 def timer(target_time : datetime = schedule['Midnight Snack']) :
     delta = target_time - datetime.now()
 
@@ -17,9 +16,6 @@ def timer(target_time : datetime = schedule['Midnight Snack']) :
     seconds = total_seconds % 60
 
     return (f"Time: {hours:02}:{minutes:02}:{seconds:02}")
-    
-
-    
 
 def countdown_index() :
     return render_template('countdown/countdown.html', temp=timer())

@@ -1,5 +1,5 @@
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import render_template
 
 schedule : dict = {
@@ -7,13 +7,13 @@ schedule : dict = {
 }
 
 def timer(target_time : datetime = schedule['Midnight Snack']) :
-    delta = target_time - datetime.now()
+    delta : timedelta = target_time - datetime.now()
 
-    total_seconds = int(delta.total_seconds())
+    total_seconds : int = int(delta.total_seconds())
 
-    hours = total_seconds // 3600
-    minutes = (total_seconds % 3600) // 60
-    seconds = total_seconds % 60
+    hours : int = total_seconds // 3600
+    minutes : int = (total_seconds % 3600) // 60
+    seconds : int = total_seconds % 60
 
     return (f"Time: {hours:02}:{minutes:02}:{seconds:02}")
 

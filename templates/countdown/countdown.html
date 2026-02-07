@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0.5">
+  </head>
+  <body>
+    <h1>Threat Level Midnight Snack</h1>
+    {% if temp %}
+      <h1>{{ temp }}</h1>
+    {% else %}
+      <h6>Couldn't fetch delta time</h6>
+    {% endif %}
+  </body>
+</html>
